@@ -2,33 +2,34 @@
 <html lang="no">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#34483d"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eir og Camillas desember"><link rel="manifest" href="manifest.webmanifest"><title>Eir og Camillas desember</title>
+<meta name="theme-color" content="#9f2635"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eir og Camillas desember"><link rel="manifest" href="manifest.webmanifest"><title>Eir og Camillas desember</title>
 <style>
-:root{--g:#34483d;--cream:#f7f4ec;--card:#fffefa;--muted:#69736b;--line:#e6e1d7;--gold:#c39a54}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:#26332b;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:760px;margin:auto;padding:20px 15px 44px}header{background:var(--g);color:white;border-radius:20px;padding:23px 20px}
-h1{font-size:27px;line-height:1.15;margin:0 0 8px}header p{margin:0;color:#e4e9e3;line-height:1.45}
-.progress{margin-top:17px}.progressrow{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}.track{height:9px;background:#ffffff38;border-radius:20px;overflow:hidden}.bar{height:100%;width:0;background:#e8c98c}
+:root{--g:#9f2635;--cream:#fbf2e9;--card:#fffdf9;--muted:#78645f;--line:#ead9cf;--gold:#d9ad62}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 8%,#fff 0 2px,transparent 3px),radial-gradient(circle at 82% 18%,#fff 0 2px,transparent 3px),var(--cream);background-size:86px 86px;color:#482b2b;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:760px;margin:auto;padding:20px 15px 44px}header{background:linear-gradient(145deg,#b52e40,#811d2b);color:white;border:2px solid #d9ad62;border-radius:20px;padding:23px 20px;box-shadow:0 5px 18px #8f263322;position:relative;overflow:hidden}
+header:after{content:"✦  ❄  ✦";position:absolute;right:16px;top:12px;color:#f6dfb6;font-size:18px;letter-spacing:8px;opacity:.9}
+h1{font-size:27px;line-height:1.15;margin:0 0 8px}header p{margin:0;color:#f8e8df;line-height:1.45}
+.progress{margin-top:17px}.progressrow{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px}.track{height:9px;background:#ffffff38;border-radius:20px;overflow:hidden}.bar{height:100%;width:0;background:#f1d08b}
 .intro{font-size:14px;color:var(--muted);line-height:1.5;margin:14px 2px 17px}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.tile{min-height:112px;border:1px solid #d8cba9;border-radius:15px;background:linear-gradient(145deg,#496252,#2f4438);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer;position:relative;box-shadow:0 3px 0 #c7b58e;transition:transform .12s,filter .12s;padding:10px}
-.tile:active{transform:translateY(2px);box-shadow:0 1px 0 #c7b58e}
-.tile .door-num{font-size:29px;font-weight:850;line-height:1;color:#f4dfb2;text-shadow:0 1px 2px #1c3025}
-.tile .door-mark{font-size:19px;line-height:1}.tile small{font-size:10px;color:#e4e9e3;letter-spacing:.06em;text-transform:uppercase}
-.tile.done-door{background:linear-gradient(145deg,#7b8d70,#52694f);border-color:#c5d1bd}
-.tile.opened{background:#fffefa;color:#34483d;border:1px solid var(--line);box-shadow:none;cursor:default;align-items:stretch;text-align:left;min-height:0;padding:14px;grid-column:1/-1}
+.tile{min-height:112px;border:1px solid #e2bd83;border-radius:15px;background:linear-gradient(145deg,#c83b4b,#8f1e30);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer;position:relative;box-shadow:0 3px 0 #d4b27d;transition:transform .12s,filter .12s;padding:10px}
+.tile:active{transform:translateY(2px);box-shadow:0 1px 0 #d4b27d}
+.tile .door-num{font-size:29px;font-weight:850;line-height:1;color:#ffe5ad;text-shadow:0 1px 2px #671725}
+.tile .door-mark{font-size:19px;line-height:1}.tile small{font-size:10px;color:#ffe9df;letter-spacing:.06em;text-transform:uppercase}
+.tile.done-door{background:linear-gradient(145deg,#78865b,#52633f);border-color:#d6c28e}
+.tile.opened{background:#fffdf9;color:#742635;border:1px solid #e7cdbb;box-shadow:0 3px 12px #8f263315;cursor:default;align-items:stretch;text-align:left;min-height:0;padding:14px;grid-column:1/-1}
 .tile.opened .door-num{font-size:12px;color:var(--gold);text-shadow:none}
 .tile.opened .door-mark,.tile.opened small{display:none}
 .tile.opened .reveal-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-.tile.opened .tag{font-size:10px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:var(--g);background:#e9eee7;border-radius:20px;padding:4px 8px}
+.tile.opened .tag{font-size:10px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:#8f2635;background:#f8e7e2;border-radius:20px;padding:4px 8px}
 .tile.opened h2{font-size:16px;margin:0 0 5px}
-.tile.opened .desc{font-size:13.5px;line-height:1.48;color:#59635b;margin:0}
-.tile.opened.done{background:#edf1eb;border-color:#cbd6ca}
+.tile.opened .desc{font-size:13.5px;line-height:1.48;color:#705d58;margin:0}
+.tile.opened.done{background:#f1f3e9;border-color:#cbd6ba}
 .tile.opened.done h2{text-decoration:line-through;color:#68756a}
 .reveal-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px}
-.done-label{display:flex;align-items:center;gap:7px;font-size:13px;color:#536257}
+.done-label{display:flex;align-items:center;gap:7px;font-size:13px;color:#70504e}
 .done-label input{width:20px;height:20px;accent-color:var(--g)}
-.close-btn{border:1px solid var(--line);background:transparent;border-radius:20px;padding:6px 10px;color:#59635b;font:inherit;font-size:12px}
+.close-btn{border:1px solid var(--line);background:transparent;border-radius:20px;padding:6px 10px;color:#80515a;font:inherit;font-size:12px}
 footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:17px;color:var(--muted);font-size:12px}
 @media(min-width:580px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.tile.opened{grid-column:1/-1}}
 </style></head><body><main>
